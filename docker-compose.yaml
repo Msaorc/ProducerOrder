@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.8.16-management
+    container_name: rabbitmq
+    hostname: rabbitmq
+    ports:
+      - "7070:7070"
+      - "70707:70707"
+      - "70707:70707"
+    environment:
+      - RABBITMT_DAFULT_USER=guest
+      - RABBITMT_DAFULT_PASS=guest
+      - RABBITMT_DAFULT_VHOST=/
