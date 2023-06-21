@@ -3,7 +3,7 @@ package rabbitmq
 import amqp "github.com/rabbitmq/amqp091-go"
 
 func OpenChannel(stringConnection string) (*amqp.Channel, error) {
-	conn, err := amqp.Dial("amqp://guest:guest@localhost:7070/")
+	conn, err := amqp.Dial(stringConnection)
 	if err != nil {
 		panic(err)
 	}
