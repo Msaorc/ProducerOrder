@@ -13,3 +13,21 @@ func OpenChannel(stringConnection string) (*amqp.Channel, error) {
 	}
 	return ch, nil
 }
+
+func Producer(ch *amqp.Channel, body string, exchengeName string) error {
+	err := ch.Publish(
+		exchengeName,
+		"",
+		false,
+		false,
+		amqp.Publishing{
+			ContentType: "text/plain",
+			Body:        []byte(body),
+		},
+	)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
