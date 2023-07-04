@@ -3,6 +3,7 @@ module github.com/Msaorc/ProducerOrder
 go 1.19
 
 require (
+	github.com/google/uuid v1.1.2
 	github.com/rabbitmq/amqp091-go v1.8.1
 	github.com/spf13/viper v1.16.0
 )
