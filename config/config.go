@@ -6,6 +6,7 @@ type configRabbitMq struct {
 	HOST     string `mapstructure:"HOST"`
 	USER     string `mapstructure:"USER"`
 	PASSWORD string `mapstructure:"PASSWORD"`
+	EXCHENGE string `mapstructure:"EXCHENGE"`
 }
 
 func LoadConfigs(path string) *configRabbitMq {
